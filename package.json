@@ -1,0 +1,21 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "NodeJS practice files",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesthomasdavey/nodejs.git"
+  },
+  "author": "James Thomas Davey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamesthomasdavey/nodejs/issues"
+  },
+  "homepage": "https://github.com/jamesthomasdavey/nodejs#readme"
+}
