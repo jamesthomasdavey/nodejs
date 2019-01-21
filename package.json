@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/jamesthomasdavey/nodejs/issues"
   },
-  "homepage": "https://github.com/jamesthomasdavey/nodejs#readme"
+  "homepage": "https://github.com/jamesthomasdavey/nodejs#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
