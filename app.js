@@ -8,7 +8,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-const adminData = require('./routes/admin');
+const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 // bodyParser can automatically collect and compile data from req.body
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // express.static serves static files from the file system
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/admin', adminData.routes);
+app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
