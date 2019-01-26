@@ -6,8 +6,10 @@ const p = path.join(path.dirname(process.mainModule.filename), 'data', 'products
 const getProductsFromFile = cb => {
   fs.readFile(p, (err, fileContent) => {
     if (err) {
+      // if there's no file, run callback with empty array
       cb([]);
     } else {
+      // if there is a file, run callback with parsed JSON (now an array of data)
       cb(JSON.parse(fileContent));
     }
   });
