@@ -40,4 +40,14 @@ module.exports = class Product {
       cb(product);
     });
   }
+  static update(updatedProduct, cb) {
+    getProductsFromFile(products => {
+      const productIndex = products.findIndex(product => product.id === updatedProduct.id);
+      products[productIndex] = updatedProduct;
+      fs.writeFile(p, JSON.stringify(products), err => {
+        if (err) console.log(err);
+        cb();
+      });
+    });
+  }
 };
