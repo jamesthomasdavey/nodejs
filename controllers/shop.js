@@ -55,6 +55,13 @@ exports.postCart = (req, res, next) => {
   });
 };
 
+exports.postCartDeleteProduct = (req, res, next) => {
+  Product.findById(req.body.id, product => {
+    Cart.deleteProduct(product.id, product.price);
+    res.redirect('/cart');
+  });
+};
+
 exports.getOrders = (req, res, next) => {
   res.render('shop/orders', { pageTitle: 'Your Orders', path: '/orders' });
 };
