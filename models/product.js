@@ -50,4 +50,15 @@ module.exports = class Product {
       cb(product);
     });
   }
+  static deleteById(id, cb) {
+    getProductsFromFile(products => {
+      const productIndex = products.findIndex(p => p.id === id);
+      const updatedProducts = [...products];
+      updatedProducts.splice(productIndex, 1);
+      fs.writeFile(p, JSON.stringify(updatedProducts), err => {
+        if (err) console.log(err);
+        cb();
+      });
+    });
+  }
 };
